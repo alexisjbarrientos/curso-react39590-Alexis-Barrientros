@@ -1,0 +1,24 @@
+.contenedor {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+}
+.contenedor > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-left: 2rem;
+    align-items: center;
+}
+.contenedor ul > li {
+    padding-inline: 4rem;
+}
+.contenedor ul> li > a {
+    color: white;
+    text-decoration: none;
+    
+}
