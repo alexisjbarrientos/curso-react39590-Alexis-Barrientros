@@ -16,6 +16,7 @@
 }
 .contenedor ul > li {
     padding-inline: 4rem;
+    margin-top: 1rem;
 }
 .contenedor ul> li > a {
     color: white;

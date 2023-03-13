@@ -1,0 +1,8 @@
+.item-container{
+    padding: 4rem;
+}
+
+.item-list{
+    display: flex;
+    gap: 1rem;
+}

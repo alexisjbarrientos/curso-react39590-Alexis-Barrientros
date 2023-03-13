@@ -1,14 +1,15 @@
-import {useEffect,useState} from "react"
+import {useEffect,useState} from "react";
+import products from "../../mocks/products";
 import ItemList from "../ItemList";
-import products from "../mocks/products";
 
 function ItemListContainer ({greeting}){
-    const [products, setProducts] = useState([]);
+    const [product, setProducts] = useState([]);
     useEffect(() => {
-        const PromiseProd = new Promise ((resolve, reject) => setTimeout(()=> resolve(products),2000));
+        const producPromise = new Promise ((resolve, reject) =>
+         setTimeout(() => resolve(product),2000));
 
-        PromiseProd
-        .then((reponse) => setProducts(reponse))
+        producPromise
+        .then((response) => setProducts(response))
         .catch((err) => console.log(err));
     },[])
     return(
