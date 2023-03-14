@@ -1,24 +1,27 @@
 import "./navbar.css";
 import CardWidget from "../CardWidget";
 
+//import para los links de las rutas
+import {NavLink} from "react-router-dom"
+
 function NavBar() {
     return (
         <div className='contenedor'>
             <ul>
                 <li>
-                    <a href="#">SMART TV</a>
+                    <NavLink to={"/category/smart-tv"}>SMART TV</NavLink>
                 </li>
                 <li>
-                    <a href="#">CELULARES</a>
+                    <NavLink to={"/category/smartphone"}>SMARTPHONE</NavLink>
                 </li>
                 <li>
-                    <a href="#">AUDIO</a>
+                    <NavLink to={"/category/audio"}>AUDIO</NavLink>
                 </li>
                 <li>
-                    <a href="#">PC ARMADAS</a>
+                    <NavLink to={"/category/pc.armadas"}>PC ARMADAS</NavLink>
                 </li>
                 <li>
-                    <a href="#">OFERTAS</a>
+                    <NavLink to={"/category/ofertas"}>OFERTAS</NavLink>
                 </li>
             </ul>
             <CardWidget />
