@@ -11,6 +11,7 @@ export default[
         description:"QLED 4k" ,
         precio:"333.999",
         image: tv1,
+        category: "smart-tv",
         stock:5,
     },
     {
@@ -19,6 +20,7 @@ export default[
         description:"512 GB" ,
         precio:"400.999",
         image: celular,
+        category : "smartphone",
         stock:3,
     },
     {
@@ -27,6 +29,7 @@ export default[
         description:"Resistente al agua , bluetooth" ,
         precio:"33.999",
         image: parlante,
+        category : "audio",
         stock:10,
     },
     {
@@ -35,6 +38,7 @@ export default[
         description:"Intel celeron 4gb Ram " ,
         precio:"123.456",
         image: pc,
+        category : "pc-armadas",
         stock:1,
     },    {
         id:5,
@@ -42,6 +46,7 @@ export default[
         description:"QLED 4k UHD" ,
         precio:"234.789",
         image: tv2,
+        category: "smart-tv",
         stock:7,
     },   
 ];

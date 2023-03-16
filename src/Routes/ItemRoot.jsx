@@ -6,9 +6,9 @@ import ItemDetailContainer from "../components/ItemDetailContainer";
 function ItemRoot (){
     return (
         <div>
-            <Titulo/>
+            {/* <Titulo/>
             <NavBar/>
-            <ItemDetailContainer/>
+            <ItemDetailContainer/>   */}
         </div>
     )
 }

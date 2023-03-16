@@ -1,13 +1,19 @@
 import Titulo from '../components/Title';
-import NavBar from '../components/NavBar'
-import ItemListContainer from "../components/ItemListContainer"
+import NavBar from '../components/NavBar';
+import ItemListContainer from "../components/ItemListContainer";
+import { useParams } from 'react-router-dom';
+
+
 function Root() {
-  return (<><header>
-    <Titulo />
-    <NavBar />
-  </header><article>
-      <ItemListContainer greeting={"Hola esta es mi primer pre-entrega Alexis Barrientos"} />
-    </article></>
+    const params = useParams()
+    const CategoryRoute= Boolean (params.id);
+    
+  return(
+    <div>
+        <Titulo/>
+        <NavBar/>
+        <ItemListContainer CategoryRoute={CategoryRoute}category={params.id}/>
+    </div>
   ) ;
 }
 

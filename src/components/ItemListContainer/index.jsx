@@ -1,19 +1,21 @@
 import {useEffect,useState} from "react";
-import products from "../../mocks/products";
+import Products from "../../mocks/products";
 //Lista de productos
 import ItemList from "../ItemList";
 
-function ItemListContainer ({category,routeCategory}){
-    const [product, setProducts] = useState([]);
-    useEffect(() => {
-        const producPromise = new Promise ((resolve, reject) =>
-         setTimeout(() => resolve(product),2000));
+function ItemListContainer ({category,CategoryRoute}){
+    const [products, setProducts] = useState([]);
 
-        producPromise
+
+    useEffect(() => {
+        const productsPromise = new Promise ((resolve, reject) =>
+         setTimeout(() => resolve(Products),2000));
+
+        productsPromise
         .then((response) => {
-            if (routeCategory){
-                const filtered = response.filter((product)=> product.category ===category);
-                setProducts(filtered);
+            if (CategoryRoute){
+                const productsfiltered = response.filter((product)=> product.category ===category);
+                setProducts(productsfiltered);
             }else{
                 setProducts(response);
             }
