@@ -11,7 +11,7 @@ function Item({product}){
           <Card.Text>
                 {product.description}
           </Card.Text>
-          <Button variant="dark"><NavLink to = {"/item/${product.id}"}></NavLink> Ver mas Info..</Button>
+        <Button variant="dark"><NavLink to = {`/item/${product.id}`}>Ver mas Info..</NavLink></Button>
         </Card.Body>
       </Card>
     );

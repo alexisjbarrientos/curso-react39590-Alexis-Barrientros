@@ -1,10 +1,12 @@
-
+import {Card} from "react-bootstrap";
 
 
 function ItemDetail(products){
     return(
         <div>
-            <p>{products[1]}</p>
+            <p>{product?.name}</p>
+            <p>{product?.description}</p>
+            <Card.Img variant="bottom" src={product?.image}/>
         </div>
     )
 }
