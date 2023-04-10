@@ -1,0 +1,33 @@
+.containercart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #dcdcdc;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .imgcart {
+    max-width: 150px;
+    margin-right: 20px;
+  }
+  
+  .descript {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .descript p {
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+
+  
+  
+  
+  

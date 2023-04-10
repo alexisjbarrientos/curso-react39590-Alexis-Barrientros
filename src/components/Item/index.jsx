@@ -1,6 +1,8 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 import { NavLink } from 'react-router-dom';
+import "./item.css"
+
 
 function Item({product}){
     return(
@@ -11,7 +13,7 @@ function Item({product}){
           <Card.Text>
                 {product.description}
           </Card.Text>
-        <Button variant="dark"><NavLink to = {`/item/${product.id}`}>Ver mas Info..</NavLink></Button>
+        <Button  variant="dark"><NavLink to = {`/item/${product.id}`}>Ver mas Info..</NavLink></Button>
         </Card.Body>
       </Card>
     );

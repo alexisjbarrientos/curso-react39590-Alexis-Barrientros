@@ -15,7 +15,7 @@ function ItemDetailContainer (){
          setTimeout(() => resolve(Products),2000));
 
         productsPromise
-        .then((response) => setProducts(response.find(products => products.id === Number(id))))
+        .then((response) => setProduct(response.find(products => products.id === Number(id))))
         .catch((err) => console.log(err));
     },[id]);
     return(

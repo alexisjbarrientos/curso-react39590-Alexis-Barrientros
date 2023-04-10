@@ -1,4 +1,4 @@
-import React, { Children } from 'react'
+import React from 'react'
 import ReactDOM from 'react-dom/client'
 import './index.css'
 //bootstrap
@@ -9,12 +9,17 @@ import {createBrowserRouter,RouterProvider,} from "react-router-dom";
 import Layout from './components/Layout';
 import Root from './Routes/Root';
 import ItemRoot from "./Routes/ItemRoot";
+import Cart from "./Routes/cart";
 
 
 
 
 const router = createBrowserRouter([
-// { Element :<Layout/> , Children : [
+{   
+    path: "/",
+    // errorElement:<errorpage/>,
+    element :<Layout /> ,
+     children : [
     {
       path: "/",
       element: <Root/>,
@@ -29,17 +34,35 @@ const router = createBrowserRouter([
     },
      {
        path: "/cart",
-      element: <Root/>,
+      element: <Cart/>,
     },
     {
      path: "/checkout",
      element: <div>Hello world!</div>,
    },
   ]
-// }
-);
-ReactDOM.createRoot(document.getElementById('root')).render(
+}
+]);
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-  <RouterProvider router={router} />
+    <CustomProvider>
+    <RouterProvider router={router} />
+    </CustomProvider>
   </React.StrictMode>,
 );
+
+
+
+import { initializeApp } from "firebase/app";
+import { CustomProvider } from './context';
+const firebaseConfig = {
+  apiKey: "AIzaSyALNk0UQFGUYTFBk1h0sxOP-Hc6QBg0R4c",
+  authDomain: "react-barrientos-alexis.firebaseapp.com",
+  projectId: "react-barrientos-alexis",
+  storageBucket: "react-barrientos-alexis.appspot.com",
+  messagingSenderId: "352099356855",
+  appId: "1:352099356855:web:c8cf0c44f3409ade7fbd32"
+};
+
+
+const app = initializeApp(firebaseConfig);

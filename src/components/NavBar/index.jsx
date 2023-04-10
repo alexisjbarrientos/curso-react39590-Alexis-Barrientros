@@ -18,7 +18,7 @@ function NavBar() {
                     <NavLink to={"/category/audio"}>AUDIO</NavLink>
                 </li>
                 <li>
-                    <NavLink to={"/category/pc.armadas"}>PC ARMADAS</NavLink>
+                    <NavLink to={"/category/pc-armadas"}>PC ARMADAS</NavLink>
                 </li>
                 <li>
                     <NavLink to={"/category/ofertas"}>OFERTAS</NavLink>

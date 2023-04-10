@@ -1,0 +1,41 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    margin-top: 3rem;
+}
+
+.titleName {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+     grid-column-start: 2;
+ }
+
+ .description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+
+ }
+ .image{
+    grid-column-start: 1;
+    grid-row-start: 1;
+
+    height: 400px;
+    width: 400px;
+    border-color: gray;
+}
+.price {
+    font-size: medium;
+    margin-top: 1rem;
+}
+.stock{
+    font-size: medium;
+    margin:20px;
+}
